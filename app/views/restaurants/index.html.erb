@@ -4,8 +4,8 @@
 <div class="card-group">
 <% @restaurants.each do |restaurant| %>
 <div class="card">
-  <div class="card-img-top" style="background: url('http://restaurantnewsrelease.com/wp-content/uploads/2013/07/The-Cheesecake-Factory-National-Cheesecake-Day-Half-Price.jpg'); background-size: cover;" alt="Card image cap"></div>
-<div class="card-block">
+  <img class="card-img-top" src="<%= restaurant.img_url %>" alt="Card image cap">
+  <div class="card-block">
   <h4 class="card-title"><%= restaurant.name %></h4>  <p class="card-text"><%= restaurant.description %></p>
   <div class="btn-group" role="group" aria-label="Basic example" id="<%= restaurant.id %>">
     <%= link_to 'Show', restaurant_path(:id => restaurant.id), class: 'btn btn-secondary' %>

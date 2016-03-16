@@ -49,10 +49,8 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <% if notice %><div class="alert alert-success"><%= notice %></div> <% end %>
+    <% if alert %><div class="alert alert-success"><%= alert %></div> <% end %>
     <%= yield %>
   </div>
 </div>

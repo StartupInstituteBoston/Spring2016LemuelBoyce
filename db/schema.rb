@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316190338) do
+ActiveRecord::Schema.define(version: 20160316203111) do
 
   create_table "owners", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 20160316190338) do
     t.string   "address"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "img_url"
+    t.integer  "owner_id"
   end
+
+  add_index "restaurants", ["owner_id"], name: "index_restaurants_on_owner_id"
 
 end
